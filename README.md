@@ -219,8 +219,8 @@ Since the project already has a temporary calculation logic in MainController.ja
 
   |Class|Features|
   |:----|:-------|
-  |PrincipalDetails.java|Data-transfer object which implements ```UserDetails``` to fulfil the requirement of Spring Security (getting password, username, account, credential, authority role information)|
-  |PrincipalDetailsService.java|Data-transfer object which implements ```UserDetailsService``` to fulfil the requirement of Spring Security when logging in. It governs the flow of [Database => UserRepository => PrincipalDetails => Spring Security].|
+  |PrincipalDetails.java|Implements ```UserDetails``` to fulfil the requirement of Spring Security (getting password, username, account, credential, authority role information)|
+  |PrincipalDetailsService.java|Implements ```UserDetailsService``` to fulfil the requirement of Spring Security when logging in. It governs the flow of [Database => UserRepository => PrincipalDetails => Spring Security].|
   |SecurityConfig.java-edit|added .formLogin() with ```loginPage``` (defines what path to use for login), ```loginProcessingUrl``` (login.html's address), ```defaultSuccessUrl```, and ```failureUrl```|
   |login.html|Login page with form of POST method at action /user/login|
   |LoginController.java|Just ```@GetMapping("/login")``` method returning "login" to specify ```login.html``` under templates foler|
